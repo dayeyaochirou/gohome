@@ -1,0 +1,115 @@
+.hk_home{
+  position: relative;
+.search_father{
+  width: 100%;
+  position: absolute;
+  top: 5vw;
+  z-index: 10;
+}
+// 导航栏
+.home_nav {
+  display: flex;
+  background-color: #fff;
+  .nav_item{
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    img{
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+}
+// 租房小组
+.home_group{
+.home_group_title{
+  height: 40px;
+  width: 100%;
+  padding:0 20px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 40px;
+  .group_title_title{
+    font-size: 16px;
+  }
+  .group_title_more{
+    color: #666;
+  }
+}
+.home_group_body {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff;
+  .home_body_item {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    border: 5px solid #f6f5f6;
+    padding:15px 0;
+   .home_group_item_name {
+     text-align: center;
+     padding: 10px 5px;
+     flex:2;
+     .item_name_1 {
+        font-weight: 500;
+        font-size: 15px;
+      }
+     .item_name_2 {
+        color: #666;
+      }
+    }
+   .home_group_item_img {
+     flex: 1;
+     padding-right: 20px;
+
+    }
+  }
+ }
+}
+// 最新资讯
+.home_news {
+  padding: 15px;
+  .home_news_title {
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .home_news_body {
+    padding: 5px;
+    background: #fff;
+    .news_body_item {
+      display: flex;
+      padding: 8px 0;
+      border-bottom: 1px solid #ccc;
+      &:last-child{
+        border-bottom: none;
+      }
+      .body_item_img {
+        flex: 1;
+      }
+      .body_item_info {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 8px;
+        .item_info_title {
+          font-size: 15px;
+          font-weight: 500;
+          padding-right: 10px;
+        }
+
+        .item_info_foot {
+          display: flex;
+          justify-content: space-between;
+          font-size: 12px;
+          color:#999;
+        }
+      }
+    }
+  }
+}
+}
