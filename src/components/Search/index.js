@@ -31,7 +31,7 @@ class index extends Component {
                 <div className={styles.search}>
                     <div className={styles.search_input}>
                         <div className={styles.city_name}>
-                            <span className={styles.city_name_content}>{this.state.cityName}</span>
+                            <span className={styles.city_name_content} onClick={()=>this.props.history.push("/CityList")}>{this.state.cityName}</span>
                             <i className="iconfont icon-arrow"></i>
                         </div>
                         <div className={styles.city_input}>

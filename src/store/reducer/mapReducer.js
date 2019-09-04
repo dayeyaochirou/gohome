@@ -3,7 +3,7 @@ import { CITY_SET } from "../actionTypes";
 
 // 1 默认数据
 const defaultState = {
-    cityName: "北京"
+    cityName: "莫斯科"
 }
   // 2 对外暴露一个函数
   // 1 state 等于什么 那么我们在 组件中就可以使用这个数据 
