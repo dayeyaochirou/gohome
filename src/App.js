@@ -8,6 +8,7 @@ import Layout from './components/Layout'
 import {citySet} from "./store/actionCreator";
 import store from "./store";
 import CityList from "./pages/CityList";
+import BaiDuMap from "./pages/BaiDuMap";
 export default class App extends Component {
   componentDidMount() {
     this.getLocalCity();
@@ -29,6 +30,7 @@ export default class App extends Component {
             <Route path="/News"render={()=><Layout><News/></Layout>}/>
             <Route path="/Profile"render={()=><Layout><Profile/></Layout>}/>
             <Route path="/CityList" component={CityList} />
+            <Route path="/BaiDuMap" component={BaiDuMap} />
           </section>
         </Router>
       </div>

@@ -5,6 +5,7 @@ import store from "../../store";
 import {withRouter} from "react-router-dom";
 
 class index extends Component {
+    Unsubscribe=null;
     constructor() {
         super();
         const storeState = store.getState();
@@ -13,7 +14,7 @@ class index extends Component {
           cityName: storeState.mapReducer.cityName
         }
         //订阅store值的改变
-        store.subscribe(this.handleStateChange);
+        this.Unsubscribe=store.subscribe(this.handleStateChange);
       }
       //store值改变后触发的函数
       handleStateChange = () => {
@@ -23,6 +24,9 @@ class index extends Component {
         this.setState({
           cityName
         })
+      }
+      componentWillUnmount(){
+         this.Unsubscribe()
       }
     render() {
         // console.log(this.props)
@@ -39,7 +43,7 @@ class index extends Component {
                             <span className={styles.city_input_content}>请输入小区或地址</span>
                         </div>
                     </div>
-                    <div className={styles.search_iont}>
+                    <div className={styles.search_iont} onClick={()=>this.props.history.push("/BaiDuMap")}>
                         <i className={"iconfont icon-map " + styles["icon-map"] }></i>
                     </div>
                 </div>
